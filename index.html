@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notre Temps Ensemble</title>
+    <title>Le compteur</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -24,12 +24,12 @@
     </style>
 </head>
 <body>
-    <h1>Notre temps ensemble</h1>
+    <h1>Compteur de jour de relation</h1>
     <p id="daysCount">Chargement...</p>
     <p id="joke">Chargement de la blague...</p>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const startDate = new Date('YYYY-MM-DD'); // Remplacez 'YYYY-MM-DD' par votre date
+            const startDate = new Date('2024-02-14'); // Remplacez 'YYYY-MM-DD' par votre date
             const today = new Date();
             const timeDiff = today - startDate;
             const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
@@ -38,10 +38,10 @@
             
             const jokes = [
                 "C'est beaucoup, putain !",
-                "Et ça continue, encore et encore, c'est que le début, d'accord, d'accord...",
-                "On devrait recevoir une médaille ou quelque chose !",
-                "C'est plus long que beaucoup de séries télé !",
-                "Si c'était un marathon, on aurait déjà franchi la ligne plusieurs fois !"
+                "Griiiiiiiiiinge",
+                "Trop, beaucoup trop",
+                "Quel suplice, je vous en supplie, stopper moi ce compteur",
+                "loooool, je vais caner"
             ];
 
             const jokeIndex = Math.floor(Math.random() * jokes.length);

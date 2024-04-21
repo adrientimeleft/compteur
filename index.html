@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Temps Ensemble</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0e4d7;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #6a5acd;
+        }
+
+        p {
+            font-size: 24px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Notre temps ensemble</h1>
+    <p id="daysCount">Chargement...</p>
+    <p id="joke">Chargement de la blague...</p>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const startDate = new Date('YYYY-MM-DD'); // Remplacez 'YYYY-MM-DD' par votre date
+            const today = new Date();
+            const timeDiff = today - startDate;
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+            document.getElementById('daysCount').innerText = `Ça fait déjà ${days} jours ensemble !`;
+            
+            const jokes = [
+                "C'est beaucoup, putain !",
+                "Et ça continue, encore et encore, c'est que le début, d'accord, d'accord...",
+                "On devrait recevoir une médaille ou quelque chose !",
+                "C'est plus long que beaucoup de séries télé !",
+                "Si c'était un marathon, on aurait déjà franchi la ligne plusieurs fois !"
+            ];
+
+            const jokeIndex = Math.floor(Math.random() * jokes.length);
+            document.getElementById('joke').innerText = jokes[jokeIndex];
+        });
+    </script>
+</body>
+</html>
